@@ -1,0 +1,65 @@
+.navContainer {
+	/* Color */
+	/* color: #e0fbfc; */
+	color: #ffffff;
+
+	/* Flex */
+	display: flex;
+	align-items: center;
+
+	/* Padding */
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+
+	padding-left: 0.7rem;
+	padding-right: 0.7rem;
+
+	background-color: #252525;
+
+	/* Border */
+	/* border-bottom: 0.5rem solid #98c1d9; */
+	border-bottom: 0.5rem solid #3c6e71;
+}
+
+.nav {
+	/* Flex */
+	display: flex;
+	flex: 1;
+	align-items: center;
+	justify-content: space-between;
+
+	/* Margins */
+	margin-inline: max((100% - 80rem)/2, clamp(1rem, 4vw, 1.5rem));
+}
+
+.linkControl {
+	color: inherit;
+	text-decoration: none;
+}
+
+.homeLink {
+	/* Fonts */
+	font-weight: 500;
+	font-size: clamp(1.5rem, 6vw, 2.5rem);
+
+	/* Font color */
+	/* color: #ade8f4; */
+	color: #519aca;
+}
+
+.navRight {
+	/* FlexBox */
+	display: flex;
+	align-items: center;
+	gap: clamp(1rem, 2vw, 1.5rem);
+
+	/* Fonts */
+	font-weight: 400;
+	font-size: clamp(1rem, 4vw, 1.5rem);
+}
+
+.rightLink:hover {
+	/* color: #98c1d9; */
+	color: #7a838d;
+	transition: color 1s;
+}
