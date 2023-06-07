@@ -3,33 +3,22 @@
 	/* color: #e0fbfc; */
 	color: #ffffff;
 
-	/* Flex */
-	display: flex;
-	align-items: center;
-
 	/* Padding */
 	padding-top: 2rem;
 	padding-bottom: 2rem;
 
-	padding-left: 0.7rem;
-	padding-right: 0.7rem;
+	padding-left: 5rem;
+	padding-right: 5rem;
 
 	background-color: #252525;
 
 	/* Border */
 	/* border-bottom: 0.5rem solid #98c1d9; */
 	border-bottom: 0.5rem solid #3c6e71;
-}
 
-.nav {
-	/* Flex */
-	display: flex;
-	flex: 1;
-	align-items: center;
-	justify-content: space-between;
+	/* Padding */
+	/* padding-inline: max((100% - 80rem)/2, clamp(1rem, 4vw, 1.5rem)); */
 
-	/* Margins */
-	margin-inline: max((100% - 80rem)/2, clamp(1rem, 4vw, 1.5rem));
 }
 
 .linkControl {
@@ -63,3 +52,90 @@
 	color: #7a838d;
 	transition: color 1s;
 }
+
+.mainNavBar{
+	display: flex;
+	flex: 1;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.mobileNavbar{
+	display: none;
+}
+
+.mobileDropDown{
+	/* Positioning */
+	position: absolute;
+	top: 6.5rem;
+	left: 0;
+
+	/* Width */
+	width: 100vw;
+
+	/* Text Align */
+	text-align: center;
+
+	/* Padding */
+	padding-top: 1.5rem;
+
+	/* Border */
+	border-radius: 15px;
+
+	background-color: #252525;
+
+	/* Animation */
+	animation: slideDown 0.4s ease-in-out; /* Animation to slide down and maintain final position */
+
+	/* Transition */
+	transition: opacity 0.5s ease-in-out; /* Transition for smooth opacity changes */
+}
+
+/* Keyframe Animation */
+@keyframes slideDown {
+	0% {
+		top: 8%;  /* Starting position above the viewport */
+		opacity: 0; /* Initially transparent */
+	}
+	100% {
+		top: 6.5rem; /* Final position */
+		opacity: 1; /* Fully visible */
+	}
+}
+
+.mobileNavLink{
+	margin-bottom: 1rem;
+	font-size: 25px;
+	font-weight: 500;
+
+	cursor: pointer;
+}
+
+.MenuIcon{
+	cursor: pointer;
+}
+
+.mobileNavLink:hover{
+	color:#7db8bb;
+}
+
+
+/* Media Queries */
+@media (max-width: 750px) {
+	.mainNavBar {
+	  display: none;
+	}
+
+	.mobileNavbar{
+		display: block;
+	}
+
+	.navContainer{
+		display: flex;
+		justify-content: flex-end;
+
+		padding-right: 2rem;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+	}
+  }
