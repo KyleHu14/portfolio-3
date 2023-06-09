@@ -33,7 +33,7 @@
 
 	/* Font color */
 	/* color: #ade8f4; */
-	color: #519aca;
+	color: #5fabaf;
 }
 
 .navRight {
@@ -58,10 +58,21 @@
 	flex: 1;
 	align-items: center;
 	justify-content: space-between;
+	margin-left: 10rem;
+	margin-right: 10rem;
 }
 
 .mobileNavbar{
 	display: none;
+}
+
+.mobileNavTitle{
+	font-weight: 500;
+	font-size: 35px;
+
+	/* Font color */
+	/* color: #ade8f4; */
+	color: #5fabaf;
 }
 
 .mobileDropDown{
@@ -119,15 +130,40 @@
 	color:#7db8bb;
 }
 
-
 /* Media Queries */
+@media (max-width: 1300px) {
+	.mainNavBar{
+		display: flex;
+		flex: 1;
+		align-items: center;
+		justify-content: space-between;
+		margin-left: 4rem;
+		margin-right: 4rem;
+	}
+}
+
+@media (max-width: 960px) {
+	.mainNavBar{
+		display: flex;
+		flex: 1;
+		align-items: center;
+		justify-content: space-between;
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+
 @media (max-width: 750px) {
 	.mainNavBar {
 	  display: none;
 	}
 
 	.mobileNavbar{
-		display: block;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
 	}
 
 	.navContainer{
@@ -138,4 +174,4 @@
 		padding-top: 1rem;
 		padding-bottom: 1rem;
 	}
-  }
+}

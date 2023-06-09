@@ -45,7 +45,13 @@ const Navbar = () => {
 
             {/* Mobile Navbar */}
             <div className={NavStyles.mobileNavbar}>
-                <Image className={NavStyles.MenuIcon} src="/icons/Bars3.svg" width={50} height={50} alt="" onClick={handleMenuClick}/>
+				<div className={NavStyles.mobileNavTitle}>
+					Welcome!
+				</div>
+				<div>
+					<Image className={NavStyles.MenuIcon} src="/icons/Bars3.svg" width={50} height={50} alt="" onClick={handleMenuClick}/>
+				</div>
+                
 				{ showMobileNavbar ? 
 					(
 						<div className={NavStyles.mobileDropDown}>
@@ -55,7 +61,6 @@ const Navbar = () => {
 						</div>
 					) : null
 				}
-                
             </div>
             
 		</nav>
