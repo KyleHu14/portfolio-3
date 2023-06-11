@@ -13,11 +13,7 @@
 	background-color: #252525;
 
 	/* Border */
-	/* border-bottom: 0.5rem solid #98c1d9; */
 	border-bottom: 0.5rem solid #3c6e71;
-
-	/* Padding */
-	/* padding-inline: max((100% - 80rem)/2, clamp(1rem, 4vw, 1.5rem)); */
 
 }
 
@@ -33,7 +29,7 @@
 
 	/* Font color */
 	/* color: #ade8f4; */
-	color: #5fabaf;
+	color: white;
 }
 
 .navRight {
@@ -72,7 +68,7 @@
 
 	/* Font color */
 	/* color: #ade8f4; */
-	color: #5fabaf;
+	color: white;
 }
 
 .mobileDropDown{

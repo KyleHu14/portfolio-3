@@ -3,7 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 
 // STYLES
-// import styles from "@/styles/Home.module.css";
+import styles from "@/styles/pages/Home.module.css";
 
 // Components
 import Navbar from "@/components/Navbar";
@@ -26,7 +26,19 @@ export default function Home() {
 			</Head>
 
 			{/* Main Content */}
-			<div>Hello! My name is Kyle.</div>
+			<div className={styles.mainSection}>
+				{/* Introduction Section */}
+				<div className={styles.intro}>
+					<div className={styles.introTitle}>Hello! My name is Kyle.</div>
+					<div className={styles.introDesc}>
+						I am an undergraduate student studying Computer Science at
+						University of California Irvine. I enjoy web development and
+						a fan of NextJS, TypeScript, and Supabase.
+					</div>
+				</div>
+				
+				
+			</div>
 		</>
 	);
 }

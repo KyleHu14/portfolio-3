@@ -1,0 +1,31 @@
+.mainSection{
+    /* border: 1px solid red; */
+
+    /* On Large screens, have a larger margin on left & right side */
+    margin-left: 27rem;
+    margin-right: 27rem;
+
+    margin-top: 5rem;
+
+    color: white;
+}
+
+.intro .introTitle{
+    font-size: 45px;
+}
+
+.intro .introDesc{
+    font-weight: 300;
+    font-size: 27px;
+
+    width: 60rem;
+
+    /* border: 1px solid red; */
+}
+
+/* @media (max-width: 2500px) {
+    .mainSection{
+        margin-left: 10rem;
+        margin-right: 10rem;
+    }
+} */

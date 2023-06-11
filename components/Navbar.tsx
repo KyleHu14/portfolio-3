@@ -40,6 +40,11 @@ const Navbar = () => {
 						href="/">
 						Blog
 					</Link>
+					<Link
+						className={`${NavStyles.linkControl} ${NavStyles.rightLink}`}
+						href="/">
+						Resume
+					</Link>
 				</div>
 			</div>
 
