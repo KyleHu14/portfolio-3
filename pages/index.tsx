@@ -37,7 +37,12 @@ export default function Home() {
 					</div>
 				</div>
 				
-				
+				{/* Project Section */}
+				<div className={styles.projects}>
+					<div className={styles.projTitle}>My Projects</div>
+					<div></div>
+				</div>
+
 			</div>
 		</>
 	);

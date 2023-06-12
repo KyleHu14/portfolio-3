@@ -2,30 +2,92 @@
     /* border: 1px solid red; */
 
     /* On Large screens, have a larger margin on left & right side */
-    margin-left: 27rem;
-    margin-right: 27rem;
+    margin-left: 20rem;
+    margin-right: 20rem;
 
     margin-top: 5rem;
 
     color: white;
 }
 
+/* 
+    Introduction Section
+*/
+
 .intro .introTitle{
+    font-weight: 500;
     font-size: 45px;
 }
 
 .intro .introDesc{
     font-weight: 300;
     font-size: 27px;
-
-    width: 60rem;
-
-    /* border: 1px solid red; */
 }
 
-/* @media (max-width: 2500px) {
-    .mainSection{
-        margin-left: 10rem;
+/* 
+    Project Section
+*/
+.projects{
+    margin-top: 3rem;
+}
+
+.projects .projTitle{
+    font-weight: 500;
+    font-size: 35px;
+}
+
+/* 
+    Media Queries
+*/
+@media (max-width: 1550px) {
+	.mainSection{
+		margin-left: 10rem;
         margin-right: 10rem;
+	}
+}
+
+@media (max-width: 960px) {
+	.mainSection{
+        margin-left: 6.1rem;
+        margin-right: 6.1rem;
+	}
+
+    .intro .introTitle{
+        font-size: 32px;
+    }
+
+    .intro .introDesc{
+        font-weight: 300;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .mainSection{
+        margin-left: 3rem;
+        margin-right: 3rem;
+	}
+
+    .intro .introTitle{
+        font-weight: 500;
+        font-size: 27px;
+    }
+
+    .intro .introDesc{
+        font-weight: 300;
+        font-size: 17px;
+    }
+}
+
+
+/* @media (max-width: 1100px) {
+
+	.intro .introTitle{
+        font-size: 35px;
+    }
+
+    .intro .introDesc{
+        font-weight: 300;
+        font-size: 20px;
     }
 } */

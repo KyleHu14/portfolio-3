@@ -127,14 +127,14 @@
 }
 
 /* Media Queries */
-@media (max-width: 1300px) {
+@media (max-width: 1550px) {
 	.mainNavBar{
 		display: flex;
 		flex: 1;
 		align-items: center;
 		justify-content: space-between;
-		margin-left: 4rem;
-		margin-right: 4rem;
+		margin-left: 3rem;
+		margin-right: 3rem;
 	}
 }
 
@@ -166,6 +166,7 @@
 		display: flex;
 		justify-content: flex-end;
 
+		padding-left: 3rem;
 		padding-right: 2rem;
 		padding-top: 1rem;
 		padding-bottom: 1rem;
