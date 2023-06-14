@@ -2,11 +2,11 @@
 import Head from "next/head";
 import Image from "next/image";
 
-// STYLES
+// Styles
 import styles from "@/styles/pages/Home.module.css";
 
 // Components
-import Navbar from "@/components/Navbar";
+import PContainer from "@/components/ProjectContainer";
 
 export default function Home() {
 	return (
@@ -39,8 +39,8 @@ export default function Home() {
 				
 				{/* Project Section */}
 				<div className={styles.projects}>
-					<div className={styles.projTitle}>My Projects</div>
-					<div></div>
+					<div className={styles.projTitle}>My Work</div>
+					<PContainer />
 				</div>
 
 			</div>

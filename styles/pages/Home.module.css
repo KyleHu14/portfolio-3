@@ -1,9 +1,7 @@
 .mainSection{
-    /* border: 1px solid red; */
-
     /* On Large screens, have a larger margin on left & right side */
-    margin-left: 20rem;
-    margin-right: 20rem;
+    margin-left: 30rem;
+    margin-right: 30rem;
 
     margin-top: 5rem;
 
@@ -13,7 +11,6 @@
 /* 
     Introduction Section
 */
-
 .intro .introTitle{
     font-weight: 500;
     font-size: 45px;
@@ -39,7 +36,21 @@
 /* 
     Media Queries
 */
-@media (max-width: 1550px) {
+@media (max-width: 1850px) {
+	.mainSection{
+		margin-left: 25rem;
+        margin-right: 25rem;
+	}
+}
+
+@media (max-width: 1650px) {
+	.mainSection{
+		margin-left: 20rem;
+        margin-right: 20rem;
+	}
+}
+
+@media (max-width: 1400px) {
 	.mainSection{
 		margin-left: 10rem;
         margin-right: 10rem;
@@ -48,6 +59,7 @@
 
 @media (max-width: 960px) {
 	.mainSection{
+        margin-top: 3.5rem;
         margin-left: 6.1rem;
         margin-right: 6.1rem;
 	}
@@ -79,15 +91,14 @@
     }
 }
 
-
-/* @media (max-width: 1100px) {
-
-	.intro .introTitle{
-        font-size: 35px;
+@media (max-width: 450px) {
+    .intro .introTitle{
+        font-weight: 500;
+        font-size: 20px;
     }
 
     .intro .introDesc{
         font-weight: 300;
-        font-size: 20px;
+        font-size: 15px;
     }
-} */
+}

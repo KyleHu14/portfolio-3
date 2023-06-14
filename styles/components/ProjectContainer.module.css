@@ -1,0 +1,17 @@
+.container{
+    /* Border */
+    border: 1px solid red;
+
+    /* Color */
+    background-color: #424242;
+
+    /* Flexbox */
+    display: flex;
+
+    /* Padding */
+    padding: 0.7rem;
+
+    /* Border */
+    border-radius: 10px;
+}
+
