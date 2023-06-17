@@ -41,6 +41,8 @@ export default function Home() {
 				<div className={styles.projects}>
 					<div className={styles.projTitle}>My Work</div>
 					<PContainer />
+					<PContainer />
+					<PContainer />
 				</div>
 
 			</div>

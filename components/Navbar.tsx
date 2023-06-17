@@ -32,11 +32,6 @@ const Navbar = () => {
 					</Link>
 					<Link
 						className={`${NavStyles.linkControl} ${NavStyles.rightLink}`}
-						href="/projects">
-						Projects
-					</Link>
-					<Link
-						className={`${NavStyles.linkControl} ${NavStyles.rightLink}`}
 						href="/">
 						Blog
 					</Link>

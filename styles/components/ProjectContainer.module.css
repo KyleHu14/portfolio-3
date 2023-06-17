@@ -1,17 +1,21 @@
 .container{
     /* Border */
-    border: 1px solid red;
-
-    /* Color */
-    background-color: #424242;
-
-    /* Flexbox */
-    display: flex;
+    /* border: 1px solid red; */
+    border-left: 3.2px solid #599FA4;
 
     /* Padding */
-    padding: 0.7rem;
+    padding-left: 0.7rem;
 
-    /* Border */
-    border-radius: 10px;
+    /* Margin */
+    margin-bottom: 3rem;
 }
 
+.title{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.text{
+    font-size: 19px;
+    font-weight: 300;
+}
