@@ -16,6 +16,10 @@ const ProjectDisplay = () => {
 				project strengthened my communication skills and my ability to
 				work independently.
 			</div>
+			<div className={styles.bottomLinks}>
+				<div className={styles.botLink}>View Site</div>
+				<div className={styles.botLink}>Github</div>
+			</div>
 		</div>
 	);
 };
