@@ -12,18 +12,24 @@ export interface Database {
       "project-content": {
         Row: {
           desc: string
+          github_link: string
           id: number
           title: string
+          website_link: string
         }
         Insert: {
           desc: string
+          github_link?: string
           id?: number
           title: string
+          website_link?: string
         }
         Update: {
           desc?: string
+          github_link?: string
           id?: number
           title?: string
+          website_link?: string
         }
         Relationships: []
       }

@@ -1,6 +1,5 @@
 // Next Elements
 import Head from "next/head";
-import Image from "next/image";
 
 // Styles
 import styles from "@/styles/pages/Home.module.css";
@@ -11,34 +10,18 @@ import PContainer from "@/components/ProjectContainer";
 // Supabase functions
 import { fetchProjectInfo } from "@/supabase/supabase";
 
-// React
-import { useEffect, useState } from "react";
-
-interface indexProps{
+// This interface is the type of the props that we pass into the home component
+interface indexProps {
 	data: {
 		desc: string;
 		id: number;
 		title: string;
+		github_link: string;
+		website_link: string;
 	}[];
 }
 
-export default function Home(props:indexProps) {
-
-	// const[projectInfo, setPInfo] = useState([{desc:"", id:-1, title:""}])
-
-	// useEffect(() => {
-	// 	const fetchProjectData = async () => {
-	// 		const data = await fetchProjectInfo()
-	// 		if(data){
-	// 			setPInfo(data);
-	// 		}
-	// 	}
-
-	// 	fetchProjectData();
-	// }, [])
-
-	console.log(props.data)
-
+export default function Home(props: indexProps) {
 	return (
 		<>
 			{/* Header */}
@@ -59,35 +42,44 @@ export default function Home(props:indexProps) {
 			<div className={styles.mainSection}>
 				{/* Introduction Section */}
 				<div className={styles.intro}>
-					<div className={styles.introTitle}>Hello! My name is Kyle.</div>
+					<div className={styles.introTitle}>
+						Hello! My name is Kyle.
+					</div>
 					<div className={styles.introDesc}>
-						I am an undergraduate student studying Computer Science at
-						University of California Irvine. I enjoy web development and
-						a fan of NextJS, TypeScript, and Supabase.
+						I am an undergraduate student studying Computer Science
+						at University of California Irvine. I enjoy web
+						development and a fan of NextJS, TypeScript, and
+						Supabase.
 					</div>
 				</div>
-				
+
 				{/* Project Section */}
 				<div className={styles.projects}>
 					<div className={styles.projTitle}>My Work</div>
 					{/* Loop through the projects and display them in containers */}
 					{props.data.map((project) => (
-						<PContainer key={project.title} title={project.title} desc={project.desc} />
+						<PContainer
+							key={project.id}
+							title={project.title}
+							desc={project.desc}
+							github_link={project.github_link}
+							website_link={project.website_link}
+						/>
 					))}
 				</div>
-
 			</div>
 		</>
 	);
 }
 
-
+// We will first get the data through the fetch project info function before the component above is rendered,
+// this prevents a flicker of an empty project container
 export async function getServerSideProps() {
 	// Fetch data from external API
-	const data = await fetchProjectInfo()
-   
-	if(data){
+	const data = await fetchProjectInfo();
+
+	if (data) {
 		// Pass data to the page via props
-		return { props: { data } }
+		return { props: { data } };
 	}
-  }
+}

@@ -31,6 +31,8 @@
 } */
 
 .botLink {
+    text-decoration: none;
+    color: white;
     font-weight: 600;
     position: relative;
     margin-right: 1rem;
@@ -52,4 +54,31 @@
 
 .botLink:hover::before {
     width: 100%;
+}
+
+.topRow{
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+/* Language Logo Styles */
+.logo{
+    background-color: #315A76;
+    /* Padding */
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+
+    /* Border radius */
+    border-radius: 25px;
+
+    /* Font Size */
+    font-size: 17px;
+
+    display: flex;
+    align-items: center;
+
+    column-gap: 0.2rem;
 }
