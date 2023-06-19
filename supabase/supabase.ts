@@ -18,11 +18,13 @@ export const supabase = createClient<Database>(
     supabase_anon_key
 )
 
-export const fetchProjectInfo = async (setState:React.Dispatch<React.SetStateAction<string>>) => {
-    try {
-        
-        return;
-    } catch (error) {
-        console.log('error')
+export const fetchProjectInfo = async () => {
+    let { data, error } = await supabase.from('project-content').select('*')
+
+    if(error){
+        console.log(`Error`, error)
+        return []
     }
+
+    return data;
 }

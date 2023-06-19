@@ -8,7 +8,37 @@ import styles from "@/styles/pages/Home.module.css";
 // Components
 import PContainer from "@/components/ProjectContainer";
 
-export default function Home() {
+// Supabase functions
+import { fetchProjectInfo } from "@/supabase/supabase";
+
+// React
+import { useEffect, useState } from "react";
+
+interface indexProps{
+	data: {
+		desc: string;
+		id: number;
+		title: string;
+	}[];
+}
+
+export default function Home(props:indexProps) {
+
+	// const[projectInfo, setPInfo] = useState([{desc:"", id:-1, title:""}])
+
+	// useEffect(() => {
+	// 	const fetchProjectData = async () => {
+	// 		const data = await fetchProjectInfo()
+	// 		if(data){
+	// 			setPInfo(data);
+	// 		}
+	// 	}
+
+	// 	fetchProjectData();
+	// }, [])
+
+	console.log(props.data)
+
 	return (
 		<>
 			{/* Header */}
@@ -40,12 +70,24 @@ export default function Home() {
 				{/* Project Section */}
 				<div className={styles.projects}>
 					<div className={styles.projTitle}>My Work</div>
-					<PContainer />
-					<PContainer />
-					<PContainer />
+					{/* Loop through the projects and display them in containers */}
+					{props.data.map((project) => (
+						<PContainer key={project.title} title={project.title} desc={project.desc} />
+					))}
 				</div>
 
 			</div>
 		</>
 	);
 }
+
+
+export async function getServerSideProps() {
+	// Fetch data from external API
+	const data = await fetchProjectInfo()
+   
+	if(data){
+		// Pass data to the page via props
+		return { props: { data } }
+	}
+  }
