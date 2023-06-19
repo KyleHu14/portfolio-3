@@ -10,3 +10,4 @@ This is the repository of my personal portfolio page. I document my tasks that I
 ## Other
 - [ ] Plan out blogs page
 - [ ] Implement supabase
+    - [ ] Initialize supabase client correctly
