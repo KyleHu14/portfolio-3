@@ -10,24 +10,28 @@ interface ProjectDisplayProps{
 	desc: string
 	github_link:string
 	website_link:string
+	iconNameArray:string[]
 }
 
-const LangLogo = () => {
+const LangIcon = ({iconName} : {iconName:string}) => {
 	return (
 		<div className={styles.logo}>
-			<div>React</div>
-			<Image src="/icons/react.svg" height={17} width={17} alt=""/>
+			<div>{iconName.charAt(0).toUpperCase() + iconName.slice(1)}</div>
+			<Image src={`/icons/${iconName}.svg`} height={17} width={17} alt=""/>
 		</div>
 	)
 }
 
-const ProjectDisplay = ({ title, desc, github_link, website_link }: ProjectDisplayProps) => {
+const ProjectDisplay = ({ title, desc, github_link, website_link, iconNameArray }: ProjectDisplayProps) => {
 	return (
 		<div className={styles.container}>
 			{/* First row of the project container */}
 			<div className={styles.topRow}>
 				<div className={styles.title}>{title}</div>
-				<LangLogo />
+				{/* Render Logos */}
+				{iconNameArray.length > 0 && iconNameArray.map((iconName) => (
+					<LangIcon key={iconName} iconName={iconName}/>
+				))}
 			</div>
 			
 			<div className={styles.text}>

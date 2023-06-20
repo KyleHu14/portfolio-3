@@ -18,6 +18,7 @@ interface indexProps {
 		title: string;
 		github_link: string;
 		website_link: string;
+		icon_names: string[];
 	}[];
 }
 
@@ -64,6 +65,7 @@ export default function Home(props: indexProps) {
 							desc={project.desc}
 							github_link={project.github_link}
 							website_link={project.website_link}
+							iconNameArray={project.icon_names}
 						/>
 					))}
 				</div>
