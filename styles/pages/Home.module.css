@@ -35,6 +35,20 @@
 }
 
 /* 
+    Error Section
+*/
+
+.errTitle{
+    font-size: 30px;
+    color:#ca7575;
+}
+
+.errText{
+    font-size: 20px;
+    color: #ffbaba;
+}
+
+/* 
     Media Queries
 */
 @media (max-width: 1850px) {

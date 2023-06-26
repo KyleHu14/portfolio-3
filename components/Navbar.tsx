@@ -9,6 +9,8 @@ import Image from "next/image";
 import NavStyles from "@/styles/components/Navbar.module.css";
 
 const Navbar = () => {
+	const [resumeLink, _] = useState("https://drive.google.com/file/d/1OrVLXR9363-fSlaJHppOuOSUk9nCv9DH/view?usp=sharing")
+
     const [showMobileNavbar, setMobileNavBar] = useState(false);
 
     const handleMenuClick = () => {
@@ -36,8 +38,8 @@ const Navbar = () => {
 						Blog
 					</Link>
 					<Link
-						className={`${NavStyles.linkControl} ${NavStyles.rightLink}`}
-						href="/">
+						className={`${NavStyles.linkControl} ${NavStyles.resume}`}
+						href={resumeLink}>
 						Resume
 					</Link>
 				</div>

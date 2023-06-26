@@ -29,10 +29,12 @@ const supabase = createClient<Database>(
 export const fetchProjectInfo = async () => {
     let { data, error } = await supabase.from('project-content').select('*')
 
+    // [DEBUG] Simulate an error
+    // let test = true;
+
     if(error){
-        console.log(`Error`, error)
         return []
     }
 
-    return data;
+    return data
 }

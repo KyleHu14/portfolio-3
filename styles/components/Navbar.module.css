@@ -49,6 +49,17 @@
 	transition: color 1s;
 }
 
+/* Resume button in navbar */
+.resume{
+	background-color: #3C6E71;
+	padding: 0.6rem;
+	border-radius: 10px;
+}
+.resume:hover{
+	background-color: #33617f;
+	transition: ease-in 0.15s;
+}
+
 .mainNavBar{
 	display: flex;
 	flex: 1;

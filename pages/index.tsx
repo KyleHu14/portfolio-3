@@ -68,6 +68,18 @@ export default function Home(props: indexProps) {
 							iconNameArray={project.icon_names}
 						/>
 					))}
+
+					{props.data.length === 0 && (
+						<div>
+							<div className={styles.errTitle}>
+								Something went wrong :(
+							</div>
+							<div className={styles.errText}>
+								Something has went wrong on the backend. I will
+								fix this as soon as possible!
+							</div>
+						</div>
+					)}
 				</div>
 			</div>
 		</>
